@@ -20,6 +20,6 @@ export const controladorImagenes = async function(req,res,next) {
         throw new Error("Subir un archivo")
     }
     else{
-        res.json(`https://proyectofinal-backend-psmari94.herokuapp.com/images/${file.filename}`)
+        res.json(`${req.hostname}/images/${file.filename}`)
     }
 }
