@@ -20,6 +20,6 @@ export const controladorImagenes = async function(req,res,next) {
         throw new Error("Subir un archivo")
     }
     else{
-        res.json(`http://localhost:8080/images/${file.filename}`)
+        res.json(`${__dirname}/images/${file.filename}`)
     }
 }
