@@ -14,7 +14,6 @@ const storage = multer.diskStorage({
 export const upload = multer ({ storage: storage})
 
 export const controladorImagenes = async function(req,res,next) {
-    console.log(req.hostname)
     const file = req.file
     if(!file){
         throw new Error("Subir un archivo")
